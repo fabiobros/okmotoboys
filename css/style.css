@@ -1,0 +1,224 @@
+:root {
+  --primary-red: #e50914;
+  --primary-red-dark: #c20810;
+  --dark-black: #121212;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--dark-black);
+  color: rgb(213 206 217) !important
+}
+
+nav {
+  background-color: #000000;
+}
+
+nav a.nav-link {
+  color: #fff;
+  transition: 0.3s;
+}
+
+nav a.nav-link:hover {
+  color: var(--primary-red);
+}
+
+h2 {
+  background-color: #cc2f2f;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 150vh;
+  background: url('../images/main_hero_foto.png') center 20% / cover no-repeat;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: rgba(71, 63, 63, 0.6); /* sobreposição escura */
+  background-blend-mode: darken;
+  padding-top: 120px;
+  padding-bottom: 100px;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparência */
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  transform: translateY(-50%);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #cccccc;
+}
+
+
+.hero-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), #ffffff);
+  z-index: 2;
+}
+
+.wave-separator svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: -10px; /* suaviza a junção */
+}
+
+
+#sobre {
+  margin-top: -50px;
+  padding-top: 80px;
+}
+
+
+.btn-cotar {
+  background-color: var(--primary-red);
+  border: none;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(220, 53, 69, 0.4);
+  color: white;
+  border-radius: 8px;
+}
+
+.btn-cotar:hover {
+  background-color: var(--primary-red-dark);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(220, 53, 69, 0.6);
+}
+
+
+/* Section Genérica */
+.section {
+  padding: 80px 0;
+}
+
+/* Botões Bootstrap personalizados */
+.btn-primary {
+  background-color: var(--primary-red);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-red-dark);
+}
+
+/* Rodapé */
+footer {
+  background-color: #000;
+  color: #ccc;
+  text-align: center;
+  padding: 40px 10px;
+}
+
+/* Mapa */
+#map {
+  height: 400px;
+  background: #333;
+}
+
+/* Cartões de Serviço */
+.servico-card {
+  background-color: #cececf !important;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servico-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.servico-icone {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background-color: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.servico-titulo {
+  color: #111;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.servico-descricao {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.servico-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.servico-icone {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(220, 53, 69, 0.1); /* vermelho claro */
+  color: #dc3545; /* vermelho forte */
+}
+
+.servico-titulo {
+  color: #111;
+  font-weight: 700;
+}
+
+.servico-descricao {
+  color: #1f0d0d;
+  font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .btn-cotar {
+    width: 100%;
+  }
+}
